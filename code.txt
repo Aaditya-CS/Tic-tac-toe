@@ -7,7 +7,7 @@ int main()
 	string elements[9] = { "1","2","3","4","5","6","7","8","9" };
 	string change = "X", choice = "0";
 	cout << "Welcome to tic tac toe! The grid at present is : " << "\n";
-	for (cycle = 0; cycle < 9; cycle++)
+	for (cycle = 0; cycle < 9; cycle++)        \\cycling through element array to display elements
 	{
 		if (cycle % 3 == 0)
 		{
@@ -24,7 +24,7 @@ int main()
 			cin >> choice;
 			for (cycle = 0; cycle < 9; cycle++)
 			{
-				if (choice == elements[cycle])
+				if (choice == elements[cycle])  //check array elements and choice, if equal replace with choice
 				{
 					elements[cycle] = change;
 					for (cycle = 0; cycle < 9; cycle++)
@@ -61,7 +61,7 @@ int main()
 				}
 			}
 		}
-		if ((elements[0] == elements[1]) && (elements[0] == elements[2]))
+		if ((elements[0] == elements[1]) && (elements[0] == elements[2]))          //Victory Conditions
 		{
 			cout << "\n" << "Horizontal Victory! " << change << " Wins the game!";
 			break;
